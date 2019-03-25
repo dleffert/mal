@@ -257,6 +257,9 @@ ns = [
     ("symbol?", _func $ run_1 $ _symbol_Q),
     ("keyword", _func $ keyword),
     ("keyword?", _func $ run_1 $ _keyword_Q),
+    ("number?", _func $ run_1 $ _number_Q),
+    ("fn?", _func $ run_1 $ _fn_Q),
+    ("macro?", _func $ run_1 $ _macro_Q),
 
     ("pr-str", _func pr_str),
     ("str", _func str),
@@ -275,7 +278,7 @@ ns = [
     ("*",  _func $ num_op (*)),
     ("/",  _func $ num_op (div)),
     ("time-ms", _func $ time_ms),
-    
+
     ("list",     _func $ list),
     ("list?",    _func $ run_1 _list_Q),
     ("vector",   _func $ vector),

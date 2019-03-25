@@ -1,7 +1,6 @@
 with Ada.Command_Line;
 with Ada.Exceptions;
 with Ada.Text_IO;
-with Ada.IO_Exceptions;
 with Core;
 with Envs;
 with Eval_Callback;
@@ -44,7 +43,7 @@ procedure Step7_Quote is
       Res : Boolean;
    begin
       case Deref (MH).Sym_Type is
-         when Bool => 
+         when Bool =>
             Res := Deref_Bool (MH).Get_Bool;
          when Nil =>
             return False;
@@ -100,8 +99,6 @@ procedure Step7_Quote is
       end case;
 
    end Eval_Ast;
-
-
 
 
    function Quasi_Quote_Processing (Param : Mal_Handle) return Mal_Handle is
@@ -357,25 +354,25 @@ procedure Step7_Quote is
 			Param := L.Get_Expr;
                         Env := E;
 			goto Tail_Call_Opt;
-                        -- was: return Eval (L.Get_Expr, E); 
+                        -- was: return Eval (L.Get_Expr, E);
 
                      else
 
-                        raise Mal_Exception with "Bind failed in Apply";
+                        raise Runtime_Exception with "Bind failed in Apply";
 
                      end if;
 
                   end;
 
                else  -- neither a Lambda or a Func
-                  raise Mal_Exception;
+                  raise Runtime_Exception with "Deref called on non-Func/Lambda";
                end if;
 
             end;
 
          end if;
 
-      else
+      else -- not a List_List
 
          return Eval_Ast (Param, Env);
 
@@ -402,7 +399,7 @@ procedure Step7_Quote is
          return Print (Evaluated_AST);
       end if;
 
-   end Rep; 
+   end Rep;
 
 
    Repl_Env : Envs.Env_Handle;
@@ -429,8 +426,6 @@ procedure Step7_Quote is
    end Do_Eval;
 
 
-   S : String (1..Reader.Max_Line_Len);
-   Last : Natural;
    Cmd_Args, File_Param : Natural;
    Command_Args : Types.Mal_Handle;
    Command_List : Types.List_Ptr;
@@ -454,8 +449,9 @@ begin
    Envs.Set (Repl_Env, "eval", New_Func_Mal_Type ("eval", Do_Eval'Unrestricted_Access));
 
    RE ("(def! not (fn* (a) (if a false true)))");
-
    RE ("(def! load-file (fn* (f) (eval (read-string (str ""(do "" (slurp f) "")"")))))");
+
+   -- Command line processing.
 
    Cmd_Args := 0;
    Command_Args := Types.New_List_Mal_Type (Types.List_List);
@@ -486,19 +482,20 @@ begin
       loop
          begin
             Ada.Text_IO.Put ("user> ");
-            Ada.Text_IO.Get_Line (S, Last);
-            Ada.Text_IO.Put_Line (Rep (S (1..Last), Repl_Env));
+            exit when Ada.Text_IO.End_Of_File;
+            Ada.Text_IO.Put_Line (Rep (Ada.Text_IO.Get_Line, Repl_Env));
          exception
-            when Ada.IO_Exceptions.End_Error => raise;
             when E : others =>
                Ada.Text_IO.Put_Line
                  (Ada.Text_IO.Standard_Error,
-                  Ada.Exceptions.Exception_Information (E));
+                  "Error: " & Ada.Exceptions.Exception_Information (E));
+               if Types.Mal_Exception_Value /= Smart_Pointers.Null_Smart_Pointer then
+                  Ada.Text_IO.Put_Line
+                    (Ada.Text_IO.Standard_Error,
+                     Printer.Pr_Str (Types.Mal_Exception_Value));
+                  Types.Mal_Exception_Value := Smart_Pointers.Null_Smart_Pointer;
+               end if;
          end;
       end loop;
    end if;
-
-exception
-   when Ada.IO_Exceptions.End_Error => null;
-   -- i.e. exit without textual output
 end Step7_Quote;

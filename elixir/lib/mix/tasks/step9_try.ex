@@ -105,7 +105,7 @@ defmodule Mix.Tasks.Step9Try do
     Mal.Reader.read_str(input)
   end
 
-  defp eval_bindings([], _env), do: _env
+  defp eval_bindings([], env), do: env
   defp eval_bindings([{:symbol, key}, binding | tail], env) do
     evaluated = eval(binding, env)
     Mal.Env.set(env, key, evaluated)
@@ -159,7 +159,7 @@ defmodule Mix.Tasks.Step9Try do
     end
   end
 
-  defp eval({:list, [], _} = empty_ast, env), do: empty_ast
+  defp eval({:list, [], _} = empty_ast, _env), do: empty_ast
   defp eval({:list, _list, _meta} = ast, env) do
     case macroexpand(ast, env) do
       {:list, list, meta} -> eval_list(list, env, meta)
@@ -231,6 +231,9 @@ defmodule Mix.Tasks.Step9Try do
   # (try* A (catch* B C))
   defp eval_list([{:symbol, "try*"}, try_form, {:list, catch_list, _meta}], env, _) do
     eval_try(try_form, catch_list, env)
+  end
+  defp eval_list([{:symbol, "try*"}, try_form], env, _) do
+    eval(try_form, env)
   end
   defp eval_list([{:symbol, "try*"}, _try_form, _], _env, _) do
     throw({:error, "try* requires a list as the second parameter"})

@@ -4,78 +4,98 @@
 
 ## Description
 
-Mal is a Clojure inspired Lisp interpreter.
+**1. Mal is a Clojure inspired Lisp interpreter**
 
-Mal is implemented in 59 languages:
+**2. Mal is implemented in 75 languages**
 
-* Ada
-* GNU awk
-* Bash shell
-* C
-* C++
-* C#
-* ChucK
-* GNU CLISP
-* Clojure
-* CoffeeScript
-* Crystal
-* D
-* Elixir
-* Emacs Lisp
-* Erlang
-* ES6 (ECMAScript 6 / ECMAScript 2015)
-* F#
-* Factor
-* Forth
-* Go
-* Groovy
-* GNU Guile
-* Haskell
-* Haxe
-* Io
-* Java
-* JavaScript ([Online Demo](http://kanaka.github.io/mal))
-* Julia
-* Kotlin
-* Logo
-* Lua
-* GNU Make
-* mal itself
-* MATLAB
-* [miniMAL](https://github.com/kanaka/miniMAL)
-* Nim
-* Object Pascal
-* Objective C
-* OCaml
-* Perl
-* Perl 6
-* PHP
-* PL/pgSQL (Postgres)
-* PL/SQL (Oracle)
-* Postscript
-* PowerShell
-* Python
-* RPython
-* R
-* Racket
-* Ruby
-* Rust
-* Scala
-* Swift
-* Swift 3
-* Tcl
-* VHDL
-* Vimscript
-* Visual Basic.NET
+| Language | Creator |
+| -------- | ------- |
+| [Ada](#ada) | [Chris Moore](https://github.com/zmower) |
+| [GNU Awk](#gnu-awk) | [Miutsuru Kariya](https://github.com/kariya-mitsuru) |
+| [Bash 4](#bash-4) | [Joel Martin](https://github.com/kanaka)  |
+| [BASIC](#basic-c64-and-qbasic) (C64 &amp; QBasic) | [Joel Martin](https://github.com/kanaka) |
+| [C](#c) | [Joel Martin](https://github.com/kanaka)  |
+| [C++](#c-1) | [Stephen Thirlwall](https://github.com/sdt) |
+| [C#](#c-2) | [Joel Martin](https://github.com/kanaka)  |
+| [ChucK](#chuck) | [Vasilij Schneidermann](https://github.com/wasamasa) |
+| [Clojure](#clojure) (Clojure &amp; ClojureScript) | [Joel Martin](https://github.com/kanaka) |
+| [CoffeeScript](#coffeescript) | [Joel Martin](https://github.com/kanaka)  |
+| [Common Lisp](#common-lisp) | [Iqbal Ansari](https://github.com/iqbalansari) |
+| [Crystal](#crystal) | [Linda_pp](https://github.com/rhysd) |
+| [D](#d) | [Dov Murik](https://github.com/dubek) |
+| [Dart](#dart) | [Harry Terkelsen](https://github.com/hterkelsen) |
+| [Elixir](#elixir) | [Martin Ek](https://github.com/ekmartin) |
+| [Elm](#elm) | [Jos van Bakel](https://github.com/c0deaddict) |
+| [Emacs Lisp](#emacs-lisp) | [Vasilij Schneidermann](https://github.com/wasamasa) |
+| [Erlang](#erlang) | [Nathan Fiedler](https://github.com/nlfiedler) |
+| [ES6](#es6-ecmascript-2015) (ECMAScript 2015) | [Joel Martin](https://github.com/kanaka) |
+| [F#](#f) | [Peter Stephens](https://github.com/pstephens) |
+| [Factor](#factor) | [Jordan Lewis](https://github.com/jordanlewis) |
+| [Fantom](#fantom) | [Dov Murik](https://github.com/dubek) |
+| [Forth](#forth) | [Chris Houser](https://github.com/chouser) |
+| [GNU Guile](#gnu-guile-21) | [Mu Lei](https://github.com/NalaGinrut) |
+| [GNU Smalltalk](#gnu-smalltalk) | [Vasilij Schneidermann](https://github.com/wasamasa) |
+| [Go](#go) | [Joel Martin](https://github.com/kanaka)  |
+| [Groovy](#groovy) | [Joel Martin](https://github.com/kanaka)  |
+| [Haskell](#haskell) | [Joel Martin](https://github.com/kanaka)  |
+| [Haxe](#haxe-neko-python-c-and-javascript) (Neko, Python, C++, &amp; JS) | [Joel Martin](https://github.com/kanaka) |
+| [Hy](#hy) | [Joel Martin](https://github.com/kanaka)  |
+| [Io](#io) | [Dov Murik](https://github.com/dubek) |
+| [Java](#java-17) | [Joel Martin](https://github.com/kanaka)  |
+| [JavaScript](#javascriptnode) ([Demo](http://kanaka.github.io/mal)) | [Joel Martin](https://github.com/kanaka) |
+| [Julia](#julia) | [Joel Martin](https://github.com/kanaka)  |
+| [Kotlin](#kotlin) | [Javier Fernandez-Ivern](https://github.com/ivern) |
+| [LiveScript](#livescript) | [Jos van Bakel](https://github.com/c0deaddict) |
+| [Logo](#logo) | [Dov Murik](https://github.com/dubek) |
+| [Lua](#lua) | [Joel Martin](https://github.com/kanaka)  |
+| [GNU Make](#gnu-make-381) | [Joel Martin](https://github.com/kanaka)  |
+| [mal itself](#mal) | [Joel Martin](https://github.com/kanaka)  |
+| [MATLAB](#matlab-gnu-octave-and-matlab) (GNU Octave &amp; MATLAB) | [Joel Martin](https://github.com/kanaka) |
+| [miniMAL](#minimal) ([Repo](https://github.com/kanaka/miniMAL), [Demo](https://kanaka.github.io/miniMAL/)) | [Joel Martin](https://github.com/kanaka) |
+| [NASM](#nasm) | [Ben Dudson](https://github.com/bendudson) |
+| [Nim](#nim-0170) | [Dennis Felsing](https://github.com/def-) |
+| [Object Pascal](#object-pascal) | [Joel Martin](https://github.com/kanaka)  |
+| [Objective C](#objective-c) | [Joel Martin](https://github.com/kanaka)  |
+| [OCaml](#ocaml-4010) | [Chris Houser](https://github.com/chouser) |
+| [Perl](#perl-58) | [Joel Martin](https://github.com/kanaka)  |
+| [Perl 6](#perl-6) | [Hinrik Örn Sigurðsson](https://github.com/hinrik) |
+| [PHP](#php-53) | [Joel Martin](https://github.com/kanaka)  |
+| [Picolisp](#picolisp) | [Vasilij Schneidermann](https://github.com/wasamasa) |
+| [PL/pgSQL](#plpgsql-postgres-sql-procedural-language) (Postgres) | [Joel Martin](https://github.com/kanaka) |
+| [PL/SQL](#plsql-oracle-sql-procedural-language) (Oracle) | [Joel Martin](https://github.com/kanaka) |
+| [PostScript](#postscript-level-23) | [Joel Martin](https://github.com/kanaka)  |
+| [PowerShell](#powershell) | [Joel Martin](https://github.com/kanaka)  |
+| [Python](#python-2x-and-3x) (2.X &amp; 3.X) | [Joel Martin](https://github.com/kanaka) |
+| [RPython](#rpython) | [Joel Martin](https://github.com/kanaka)  |
+| [R](#r) | [Joel Martin](https://github.com/kanaka)  |
+| [Racket](#racket-53) | [Joel Martin](https://github.com/kanaka)  |
+| [Rexx](#rexx) | [Dov Murik](https://github.com/dubek) |
+| [Ruby](#ruby-19) | [Joel Martin](https://github.com/kanaka)  |
+| [Rust](#rust-100-nightly) | [Joel Martin](https://github.com/kanaka)  |
+| [Scala](#scala) | [Joel Martin](https://github.com/kanaka)  |
+| [Scheme (R7RS)](#scheme-r7rs) | [Vasilij Schneidermann](https://github.com/wasamasa) |
+| [Skew](#skew) | [Dov Murik](https://github.com/dubek) |
+| [Swift 2](#swift) | [Keith Rollin](https://github.com/keith-rollin) |
+| [Swift 3](#swift-3) | [Joel Martin](https://github.com/kanaka)  |
+| [Swift 4](#swift-4) | [陆遥](https://github.com/LispLY)  |
+| [Tcl](#tcl-86) | [Dov Murik](https://github.com/dubek) |
+| [TypeScript](#typescript) | [Masahiro Wakame](https://github.com/vvakame) |
+| [VHDL](#vhdl) | [Dov Murik](https://github.com/dubek) |
+| [Vimscript](#vimscript) | [Dov Murik](https://github.com/dubek) |
+| [Visual Basic.NET](#visual-basicnet) | [Joel Martin](https://github.com/kanaka)  |
+| [WebAssembly](#webassembly-wasm) (wasm) | [Joel Martin](https://github.com/kanaka) |
+| [Yorick](#yorick) | [Dov Murik](https://github.com/dubek) |
 
 
-Mal is a learning tool. See the [make-a-lisp process
-guide](process/guide.md). Each implementation of mal is separated into
+**3. Mal is a learning tool**
+
+Each implementation of mal is separated into
 11 incremental, self-contained (and testable) steps that demonstrate
 core concepts of Lisp. The last step is capable of self-hosting
-(running the mal implementation of mal).
+(running the mal implementation of mal). See the [make-a-lisp process
+guide](process/guide.md). 
 
-The mal (make a lisp) steps are:
+The make-a-lisp steps are:
 
 * [step0_repl](process/guide.md#step0)
 * [step1_read_print](process/guide.md#step1)
@@ -89,15 +109,11 @@ The mal (make a lisp) steps are:
 * [step9_try](process/guide.md#step9)
 * [stepA_mal](process/guide.md#stepA)
 
+Each make-a-lisp step has an associated architectural diagram. That elements
+that are new for that step are highlighted in red.
+Here is the final diagram for [step A](process/guide.md#stepA):
 
-Mal was presented publicly for the first time in a lightning talk at
-Clojure West 2014 (unfortunately there is no video). See
-examples/clojurewest2014.mal for the presentation that was given at the
-conference (yes the presentation is a mal program). At Midwest.io
-2015, Joel Martin gave a presentation on Mal titled "Achievement
-Unlocked: A Better Path to Language Learning".
-[Video](https://www.youtube.com/watch?v=lgyOAiRtZGw),
-[Slides](http://kanaka.github.io/midwest.io.mal/).
+![stepA_mal architecture](process/stepA_mal.png)
 
 If you are interesting in creating a mal implementation (or just
 interested in using mal for something), please drop by the #mal
@@ -105,11 +121,32 @@ channel on freenode. In addition to the [make-a-lisp process
 guide](process/guide.md) there is also a [mal/make-a-lisp
 FAQ](docs/FAQ.md) where I attempt to answer some common questions.
 
+
+## Presentations
+
+Mal was presented publicly for the first time in a lightning talk at
+Clojure West 2014 (unfortunately there is no video). See
+examples/clojurewest2014.mal for the presentation that was given at the
+conference (yes, the presentation is a mal program).
+
+At Midwest.io 2015, Joel Martin gave a presentation on Mal titled
+"Achievement Unlocked: A Better Path to Language Learning".
+[Video](https://www.youtube.com/watch?v=lgyOAiRtZGw),
+[Slides](http://kanaka.github.io/midwest.io.mal/).
+
+More recently Joel gave a presentation on "Make Your Own Lisp Interpreter
+in 10 Incremental Steps" at LambdaConf 2016:
+[Part 1](https://www.youtube.com/watch?v=jVhupfthTEk),
+[Part 2](https://www.youtube.com/watch?v=X5OQBMGpaTU),
+[Part 3](https://www.youtube.com/watch?v=6mARZzGgX4U),
+[Part 4](https://www.youtube.com/watch?v=dCO1SYR5kDU),
+[Slides](http://kanaka.github.io/lambdaconf/).
+
 ## Building/running implementations
 
 The simplest way to run any given implementation is to use docker.
 Every implementation has a docker image pre-built with language
-dependencies installed. You can launch the REPL using a convenience
+dependencies installed. You can launch the REPL using a convenient
 target in the top level Makefile (where IMPL is the implementation
 directory name and stepX is the step to run):
 
@@ -121,8 +158,6 @@ make DOCKERIZE=1 "repl^IMPL"
 
 
 ### Ada
-
-*The Ada implementation was created by [Chris Moore](https://github.com/zmower)*
 
 The Ada implementation was developed with GNAT 4.9 on debian. It also
 compiles unchanged on windows if you have windows versions of git,
@@ -136,8 +171,6 @@ make
 ```
 
 ### GNU awk
-
-*The GNU awk implementation was created by [Miutsuru kariya](https://github.com/kariya-mitsuru)*
 
 The GNU awk implementation of mal has been tested with GNU awk 4.1.1.
 
@@ -153,6 +186,35 @@ cd bash
 bash stepX_YYY.sh
 ```
 
+### BASIC (C64 and QBasic)
+
+The BASIC implementation uses a preprocessor that can generate BASIC
+code that is compatible with both C64 BASIC (CBM v2) and QBasic. The
+C64 mode has been tested with
+[cbmbasic](https://github.com/kanaka/cbmbasic) (the patched version is
+currently required to fix issues with line input) and the QBasic mode
+has been tested with [qb64](http://www.qb64.net/).
+
+Generate C64 code and run it using cbmbasic:
+
+```
+cd basic
+make stepX_YYY.bas
+STEP=stepX_YYY ./run
+```
+
+Generate QBasic code and load it into qb64:
+
+```
+cd basic
+make MODE=qbasic stepX_YYY.bas
+./qb64 stepX_YYY.bas
+```
+
+Thanks to [Steven Syrek](https://github.com/sjsyrek) for the original
+inspiration for this implementation.
+
+
 ### C
 
 The C implementation of mal requires the following libraries (lib and
@@ -166,8 +228,6 @@ make
 ```
 
 ### C++
-
-*The C++ implementation was created by [Stephen Thirlwall (sdt)](https://github.com/sdt)*
 
 The C++ implementation of mal requires g++-4.9 or clang++-3.5 and
 a readline compatible library to build. See the `cpp/README.md` for
@@ -196,25 +256,10 @@ mono ./stepX_YYY.exe
 
 ### ChucK
 
-*The ChucK implementation was created by [Vasilij Schneidermann](https://github.com/wasamasa)*
-
-The ChucK implementation has been tested with ChucK 1.3.5.2 on Arch
-Linux.
+The ChucK implementation has been tested with ChucK 1.3.5.2.
 
 ```
 cd chuck
-./run
-```
-
-### GNU CLISP
-
-*The GNU CLISP implementation was created by [Iqbal Ansari](https://github.com/iqbalansari)*
-
-The implementation has been tested with GNU CLISP v2.49 on Ubuntu 16.04, 14.04 and 12.04
-
-```
-cd clisp
-make
 ./run
 ```
 
@@ -236,11 +281,22 @@ cd coffee
 coffee ./stepX_YYY
 ```
 
+### Common Lisp
+
+The implementation has been tested with SBCL, CCL, CMUCL, GNU CLISP, ECL and
+Allegro CL on Ubuntu 16.04 and Ubuntu 12.04, see
+the [README](common-lisp/README.org) for more details. Provided you have the
+dependencies mentioned installed, do the following to run the implementation
+
+```
+cd common-lisp
+make
+./run
+```
+
 ### Crystal
 
-*The Crystal implementation of mal was created by [Linda_pp](https://github.com/rhysd)*
-
-The Crystal implementation of mal has been tested with Crystal 0.18.4.
+The Crystal implementation of mal has been tested with Crystal 0.26.1.
 
 ```
 cd crystal
@@ -252,8 +308,6 @@ make   # needed to run tests
 
 ### D
 
-*The D implementation was created by [Dov Murik](https://github.com/dubek)*
-
 The D implementation of mal was tested with GDC 4.8.  It requires the GNU
 readline library.
 
@@ -263,9 +317,16 @@ make
 ./stepX_YYY
 ```
 
-### Emacs Lisp
+### Dart
 
-*The Emacs Lisp implementation was created by [Vasilij Schneidermann](https://github.com/wasamasa)*
+The Dart implementation has been tested with Dart 1.20.
+
+```
+cd dart
+dart ./stepX_YYY
+```
+
+### Emacs Lisp
 
 The Emacs Lisp implementation of mal has been tested with Emacs 24.3
 and 24.5.  While there is very basic readline editing (`<backspace>`
@@ -281,8 +342,6 @@ rlwrap emacs -Q --batch --load stepX_YYY.el
 
 ### Elixir
 
-*The Elixir implementation was created by [Martin Ek (ekmartin)](https://github.com/ekmartin)*
-
 The Elixir implementation of mal has been tested with Elixir 1.0.5.
 
 ```
@@ -292,9 +351,17 @@ mix stepX_YYY
 iex -S mix stepX_YYY
 ```
 
-### Erlang
+### Elm
 
-*The Erlang implementation was created by [Nathan Fiedler (nlfiedler)](https://github.com/nlfiedler)*
+The Elm implementation of mal has been tested with Elm 0.18.0
+
+```
+cd elm
+make stepX_YYY.js
+STEP=stepX_YYY ./run
+```
+
+### Erlang
 
 The Erlang implementation of mal requires [Erlang/OTP R17](http://www.erlang.org/download.html)
 and [rebar](https://github.com/rebar/rebar) to build.
@@ -307,11 +374,11 @@ MAL_STEP=stepX_YYY rebar compile escriptize # build individual step
 ./stepX_YYY
 ```
 
-### ES6 (ECMAScript 6 / ECMAScript 2015)
+### ES6 (ECMAScript 2015)
 
-The ES6 implementation uses the [babel](https://babeljs.io) compiler
-to generate ES5 compatible JavaScript. The generated code has been
-tested with Node 0.12.4.
+The ES6 / ECMAScript 2015 implementation uses the
+[babel](https://babeljs.io) compiler to generate ES5 compatible
+JavaScript. The generated code has been tested with Node 0.12.4.
 
 ```
 cd es6
@@ -321,8 +388,6 @@ node build/stepX_YYY.js
 
 
 ### F# ###
-
-*The F# implementation was created by [Peter Stephens (pstephens)](https://github.com/pstephens)*
 
 The F# implementation of mal has been tested on Linux using the Mono
 F# compiler (fsharpc) and the Mono runtime (version 3.12.1). The mono C#
@@ -337,8 +402,6 @@ mono ./stepX_YYY.exe
 
 ### Factor
 
-*The Factor implementation was created by [Jordan Lewis (jordanlewis)](https://github.com/jordanlewis)*
-
 The Factor implementation of mal has been tested with Factor 0.97
 ([factorcode.org](http://factorcode.org)).
 
@@ -347,13 +410,37 @@ cd factor
 FACTOR_ROOTS=. factor -run=stepX_YYY
 ```
 
-### Forth
+### Fantom
 
-*The Forth implementation was created by [Chris Houser (chouser)](https://github.com/chouser)*
+The Fantom implementation of mal has been tested with Fantom 1.0.70.
+
+```
+cd fantom
+make lib/fan/stepX_YYY.pod
+STEP=stepX_YYY ./run
+```
+
+### Forth
 
 ```
 cd forth
 gforth stepX_YYY.fs
+```
+
+### GNU Guile 2.1+
+
+```
+cd guile
+guile -L ./ stepX_YYY.scm
+```
+
+### GNU Smalltalk
+
+The Smalltalk implementation of mal has been tested with GNU Smalltalk 3.2.91.
+
+```
+cd gnu-smalltalk
+./run
 ```
 
 ### Go
@@ -379,21 +466,10 @@ make
 groovy ./stepX_YYY.groovy
 ```
 
-### GNU Guile 2.1+
-
-*The Guile implementation was created by [Mu Lei (NalaGinrut)](https://github.com/NalaGinrut).*
-
-```
-cd guile
-guile -L ./ stepX_YYY.scm
-```
-
 ### Haskell
 
-Install the Haskell compiler (ghc/ghci), the Haskell platform and
-either the editline package (BSD) or the readline package (GPL). On
-Ubuntu these packages are: ghc, haskell-platform,
-libghc-readline-dev/libghc-editline-dev
+The Haskell implementation requires the ghc compiler version 7.10.1 or
+later and also the Haskell parsec and readline (or editline) packages.
 
 ```
 cd haskell
@@ -401,7 +477,7 @@ make
 ./stepX_YYY
 ```
 
-### Haxe
+### Haxe (Neko, Python, C++ and JavaScript)
 
 The Haxe implementation of mal requires Haxe version 3.2 to compile.
 Four different Haxe targets are supported: Neko, Python, C++, and
@@ -423,9 +499,16 @@ make all-js
 node ./stepX_YYY.js
 ```
 
-### Io
+### Hy
 
-*The Io implementation was created by [Dov Murik](https://github.com/dubek)*
+The Hy implementation of mal has been tested with Hy 0.13.0.
+
+```
+cd hy
+./stepX_YYY.hy
+```
+
+### Io
 
 The Io implementation of mal has been tested with Io version 20110905.
 
@@ -465,8 +548,6 @@ julia stepX_YYY.jl
 
 ### Kotlin
 
-*The Kotlin implementation was created by [Javier Fernandez-Ivern](https://github.com/ivern)*
-
 The Kotlin implementation of mal has been tested with Kotlin 1.0.
 
 ```
@@ -475,9 +556,17 @@ make
 java -jar stepX_YYY.jar
 ```
 
-### Logo
+### LiveScript
 
-*The Logo implementation was created by [Dov Murik](https://github.com/dubek)*
+The LiveScript implementation of mal has been tested with LiveScript 1.5.
+
+```
+cd livescript
+make
+node_modules/.bin/lsc stepX_YYY.ls
+```
+
+### Logo
 
 The Logo implementation of mal has been tested with UCBLogo 6.0.
 
@@ -488,8 +577,9 @@ logo stepX_YYY.lg
 
 ### Lua
 
-Running the Lua implementation of mal requires lua 5.1 or later,
-luarocks and the lua-rex-pcre library installed.
+The Lua implementation of mal has been tested with Lua 5.2. The
+implementation requires that luarocks and the lua-rex-pcre library
+are installed.
 
 ```
 cd lua
@@ -516,11 +606,20 @@ cd make
 make -f stepX_YYY.mk
 ```
 
-### Nim 0.11.0
+### NASM
 
-*The Nim implementation was created by [Dennis Felsing (def-)](https://github.com/def-)*
+The NASM implementation of mal is written for x86-64 Linux, and has been tested
+with Linux 3.16.0-4-amd64 and NASM version 2.11.05.
 
-Running the Nim implementation of mal requires Nim 0.11.0 or later.
+```
+cd nasm
+make
+./stepX_YYY
+```
+
+### Nim 0.17.0
+
+The Nim implementation of mal has been tested with Nim 0.17.0.
 
 ```
 cd nim
@@ -555,26 +654,25 @@ make
 
 ### OCaml 4.01.0
 
-*The OCaml implementation was created by [Chris Houser (chouser)](https://github.com/chouser)*
-
 ```
 cd ocaml
 make
 ./stepX_YYY
 ```
 
-### MATLAB
+### MATLAB (GNU Octave and MATLAB)
 
-The MATLAB implementation of mal has been tested with MATLAB version
-R2014a on Linux. Note that MATLAB is a commercial product. It should
-be fairly simple to support GNU Octave once it support classdef object
-syntax.
+The MatLab implementation has been tested with GNU Octave 4.2.1.
+It has also been tested with MATLAB version R2014a on Linux. Note that
+MATLAB is a commercial product.
 
 ```
 cd matlab
 ./stepX_YYY
+octave -q --no-gui --no-history --eval "stepX_YYY();quit;"
 matlab -nodisplay -nosplash -nodesktop -nojvm -r "stepX_YYY();quit;"
     # OR with command line arguments
+octave -q --no-gui --no-history --eval "stepX_YYY('arg1','arg2');quit;"
 matlab -nodisplay -nosplash -nodesktop -nojvm -r "stepX_YYY('arg1','arg2');quit;"
 ```
 
@@ -605,8 +703,6 @@ perl stepX_YYY.pl
 
 ### Perl 6
 
-*The Perl 6 implementation was created by [Hinrik Örn Sigurðsson](https://github.com/hinrik)*
-
 The Perl 6 implementation was tested on Rakudo Perl 6 2016.04.
 
 ```
@@ -622,6 +718,16 @@ to run.
 ```
 cd php
 php stepX_YYY.php
+```
+
+### Picolisp
+
+The Picolisp implementation requires libreadline and Picolisp 3.1.11
+or later.
+
+```
+cd picolisp
+./run
 ```
 
 ### PL/pgSQL (Postgres SQL Procedural Language)
@@ -683,7 +789,7 @@ cd powershell
 powershell ./stepX_YYY.ps1
 ```
 
-### Python (2.X or 3.X)
+### Python (2.X and 3.X)
 
 ```
 cd python
@@ -721,6 +827,16 @@ cd racket
 ./stepX_YYY.rkt
 ```
 
+### Rexx
+
+The Rexx implementation of mal has been tested with Regina Rexx 3.6.
+
+```
+cd rexx
+make
+rexx -a ./stepX_YYY.rexxpp
+```
+
 ### Ruby (1.9+)
 
 ```
@@ -750,9 +866,49 @@ sbt compile
 scala -classpath target/scala*/classes stepX_YYY
 ```
 
-### Swift
+### Scheme (R7RS) ###
 
-*The Swift implementation was created by [Keith Rollin](https://github.com/keith-rollin)*
+The Scheme implementation of mal has been tested with Chibi-Scheme
+0.7.3, Kawa 2.4, Gauche 0.9.5, CHICKEN 4.11.0, Sagittarius 0.8.3,
+Cyclone 0.6.3 (Git version) and Foment 0.4 (Git version).  You should
+be able to get it running on other conforming R7RS implementations
+after figuring out how libraries are loaded and adjusting the
+`Makefile` and `run` script accordingly.
+
+```
+cd scheme
+make symlinks
+# chibi
+scheme_MODE=chibi ./run
+# kawa
+make kawa
+scheme_MODE=kawa ./run
+# gauche
+scheme_MODE=gauche ./run
+# chicken
+make chicken
+scheme_MODE=chicken ./run
+# sagittarius
+scheme_MODE=sagittarius ./run
+# cyclone
+make cyclone
+scheme_MODE=cyclone ./run
+# foment
+scheme_MODE=foment ./run
+```
+
+### Skew ###
+
+The Skew implementation of mal has been tested with Skew 0.7.42.
+
+```
+cd skew
+make
+node stepX_YYY.js
+```
+
+
+### Swift
 
 The Swift implementation of mal requires the Swift 2.0 compiler (XCode
 7.0) to build. Older versions will not work due to changes in the
@@ -775,9 +931,18 @@ make
 ./stepX_YYY
 ```
 
-### Tcl 8.6
+### Swift 4
 
-*The Tcl implementation was created by [Dov Murik](https://github.com/dubek)*
+The Swift 4 implementation of mal requires the Swift 4.0 compiler. It
+has been tested with Swift 4.2.3 release.
+
+```
+cd swift4
+make
+./stepX_YYY
+```
+
+### Tcl 8.6
 
 The Tcl implementation of mal requires Tcl 8.6 to run.  For readline line
 editing support, install tclreadline.
@@ -787,9 +952,18 @@ cd tcl
 tclsh ./stepX_YYY.tcl
 ```
 
-### VHDL
+### TypeScript
 
-*The VHDL implementation was created by [Dov Murik](https://github.com/dubek)*
+The TypeScript implementation of mal requires the TypeScript 2.2 compiler.
+It has been tested with Node.js v6.
+
+```
+cd ts
+make
+node ./stepX_YYY.js
+```
+
+### VHDL
 
 The VHDL implementation of mal has been tested with GHDL 0.29.
 
@@ -801,10 +975,7 @@ make
 
 ### Vimscript
 
-*The Vimscript implementation was created by [Dov Murik](https://github.com/dubek)*
-
-The Vimscript implementation of mal requires Vim to run.  It has been tested
-with Vim 7.4.
+The Vimscript implementation of mal requires Vim 8.0 to run.
 
 ```
 cd vimscript
@@ -823,9 +994,39 @@ make
 mono ./stepX_YYY.exe
 ```
 
+### WebAssembly (wasm) ###
+
+The WebAssembly implementation is written in
+[Wam](https://github.com/kanaka/wam) (WebAssembly Macro language) and
+runs under the [wac/wace](https://github.com/kanaka/wac) WebAssembly
+runtime.
+
+```
+cd wasm
+make
+wace ./stepX_YYY.wasm
+```
+
+### Yorick
+
+The Yorick implementation of mal was tested on Yorick 2.2.04.
+
+```
+cd yorick
+yorick -batch ./stepX_YYY.i
+```
+
 
 
 ## Running tests
+
+The top level Makefile has a number of useful targets to assist with
+implementation development and testing. The `help` target provides
+a list of the targets and options:
+
+```
+make help
+```
 
 ### Functional tests
 
@@ -835,9 +1036,6 @@ containing tests specific to that step. The `runtest.py` test harness
 launches a Mal step implementation and then feeds the tests one at
 a time to the implementation and compares the output/return value to
 the expected output/return value.
-
-To simplify the process of running tests, a top level Makefile is
-provided with convenient test targets.
 
 * To run all the tests across all implementations (be prepared to wait):
 
@@ -989,12 +1187,32 @@ make "docker-build^IMPL"
 **Notes**:
 * Docker images are named *"kanaka/mal-test-IMPL"*
 * JVM-based language implementations (Groovy, Java, Clojure, Scala):
-  you will probably need to run these implementations once manually
-  first (make DOCKERIZE=1 "repl^IMPL")before you can run tests because
+  you will probably need to run this command once manually
+  first `make DOCKERIZE=1 "repl^IMPL"` before you can run tests because
   runtime dependencies need to be downloaded to avoid the tests timing
-  out. These dependencies are download to dot-files in the /mal
+  out. These dependencies are downloaded to dot-files in the /mal
   directory so they will persist between runs.
 
+
+## External Implementations
+
+The following implementations are maintained as separate projects:
+
+### HolyC
+
+* [by Alexander Bagnalla](https://github.com/bagnalla/holyc_mal)
+
+### Rust
+
+* [by Tim Morgan](https://github.com/seven1m/mal-rust)
+* [by vi](https://github.com/vi/mal-rust-vi) - using [Pest](https://pest.rs/) grammar, not using typical Mal infrastructure (cargo-ized steps and built-in converted tests).
+
+
+## Other mal Projects
+
+ * [malc](https://github.com/dubek/malc) - Mal (Make A Lisp) compiler. Compiles a Mal program to LLVM assembly language, then binary.
+ * [malcc](https://git.sr.ht/~tim/malcc) (@seven1m) - malcc is an incremental compiler implementation for the Mal language. It uses the Tiny C Compiler as the compiler backend and has full support for the Mal language, including macros, tail-call elimination, and even run-time eval.
+ * [frock](https://github.com/chr15m/frock) - Clojure-flavoured PHP. Uses mal/php to run programs.
 
 ## License
 

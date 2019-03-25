@@ -50,8 +50,11 @@ static String safeRep(const String& input, malEnvPtr env)
     catch (malEmptyInputException&) {
         return String();
     }
+    catch (malValuePtr& mv) {
+        return "Error: " + mv->print(true);
+    }
     catch (String& s) {
-        return s;
+        return "Error: " + s;
     };
 }
 
@@ -181,8 +184,13 @@ malValuePtr EVAL(malValuePtr ast, malEnvPtr env)
             }
 
             if (special == "try*") {
-                checkArgsIs("try*", 2, argCount);
                 malValuePtr tryBody = list->item(1);
+
+                if (argCount == 1) {
+                    ast = EVAL(tryBody, env);
+                    continue; // TCO
+                }
+                checkArgsIs("try*", 2, argCount);
                 const malList* catchBlock = VALUE_CAST(malList, list->item(2));
 
                 checkArgsIs("catch*", 2, catchBlock->count() - 1);
